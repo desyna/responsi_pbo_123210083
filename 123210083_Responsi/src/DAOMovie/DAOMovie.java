@@ -53,8 +53,20 @@ public class DAOMovie implements IDAOMovie {
         PreparedStatement statement = null;
         try {
             statement = con.prepareStatement(strInsert);
-        } catch (Exception e) {
+            statement.setString(1,b.getJudul());
+            statement.setInt(2,b.getAlur());
+            statement.setString(3,b.getPenokohan());
+            statement.setString(4,b.getAkting());
+            statement.setString(5,b.getNilai());
+            statement.execute();
+        } catch (SQLException e) {
             System.out.println("error");
+            result = false;
+        }
+        finally {
+            try { 
+                result = false;
+            }
         }
         return result;
     }
