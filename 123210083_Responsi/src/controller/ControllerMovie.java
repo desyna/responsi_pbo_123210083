@@ -37,7 +37,7 @@ public class ControllerMovie {
         b.setAkting(Integer.parseInt(frmMovie.getTxtAkting().getText()));
         
         boolean rs = iMovie.insert(b);
-        if(res)
+        if(rs)
             JOptionPane.showMessageDialog(null,"Input Berhasil");
         else
             JOptionPane.showMessageDialog(null,"Input Gagal");
