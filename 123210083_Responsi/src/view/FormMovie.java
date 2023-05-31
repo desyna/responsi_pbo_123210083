@@ -24,6 +24,13 @@ public class FormMovie extends javax.swing.JFrame {
         ctMov.isiTabel();    
         
     }
+    
+    private void btnTambahActionPerformed(java.awt.event.ActionEvent evt) {                                          
+        // TODO add your handling code here:
+        ctMov.Insert();
+        ctMov.isiTabel();
+        ctMov.reset();
+    }   
 
     /**
      * This method is called from within the constructor to initialize the form.
